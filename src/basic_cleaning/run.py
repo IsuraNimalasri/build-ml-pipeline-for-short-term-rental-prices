@@ -31,7 +31,7 @@ def go(args):
     df['last_review'] = pd.to_datetime(df['last_review'])
 
     # for the fail case
-    idx = df['longitude'].between(-74.25, -73.50) & df['latitude'].between(40.5, 41.2)
+    idx = df['longitude'].between(-74.25, -73.50) & df['latitude'].between(40.50, 41.20)
     df = df[idx].copy()
 
     logger.info("Saving the output artifact")
